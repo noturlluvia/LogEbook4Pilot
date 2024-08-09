@@ -1,0 +1,719 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF7EDE012C65814E00055C43 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDE002C65814E00055C43 /* Tests_iOS.swift */; };
+		FF7EDE0C2C65814E00055C43 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDE0B2C65814E00055C43 /* Tests_macOS.swift */; };
+		FF7EDE0E2C65814E00055C43 /* AviLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDDE52C65814600055C43 /* AviLogApp.swift */; };
+		FF7EDE0F2C65814E00055C43 /* AviLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDDE52C65814600055C43 /* AviLogApp.swift */; };
+		FF7EDE102C65814E00055C43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDDE62C65814600055C43 /* ContentView.swift */; };
+		FF7EDE112C65814E00055C43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDDE62C65814600055C43 /* ContentView.swift */; };
+		FF7EDE122C65814E00055C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF7EDDE72C65814E00055C43 /* Assets.xcassets */; };
+		FF7EDE132C65814E00055C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF7EDDE72C65814E00055C43 /* Assets.xcassets */; };
+		FF7EDE232C65878800055C43 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDE222C65878800055C43 /* TestView.swift */; };
+		FF7EDE242C65878800055C43 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDE222C65878800055C43 /* TestView.swift */; };
+		FF7EDE262C658E7300055C43 /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDE252C658E7300055C43 /* LogEntry.swift */; };
+		FF7EDE272C658E7300055C43 /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDE252C658E7300055C43 /* LogEntry.swift */; };
+		FF7EDE292C65DAAE00055C43 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDE282C65DAAB00055C43 /* SummaryView.swift */; };
+		FF7EDE2A2C65DAAE00055C43 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDE282C65DAAB00055C43 /* SummaryView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF7EDDFD2C65814E00055C43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF7EDDE02C65814500055C43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF7EDDEB2C65814E00055C43;
+			remoteInfo = "AviLog (iOS)";
+		};
+		FF7EDE082C65814E00055C43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF7EDDE02C65814500055C43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF7EDDF32C65814E00055C43;
+			remoteInfo = "AviLog (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF7EDDE52C65814600055C43 /* AviLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AviLogApp.swift; sourceTree = "<group>"; };
+		FF7EDDE62C65814600055C43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FF7EDDE72C65814E00055C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF7EDDEC2C65814E00055C43 /* AviLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AviLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF7EDDEF2C65814E00055C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF7EDDF42C65814E00055C43 /* AviLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AviLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF7EDDF62C65814E00055C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF7EDDF72C65814E00055C43 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		FF7EDDFC2C65814E00055C43 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF7EDE002C65814E00055C43 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		FF7EDE022C65814E00055C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF7EDE072C65814E00055C43 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF7EDE0B2C65814E00055C43 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		FF7EDE0D2C65814E00055C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF7EDE222C65878800055C43 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		FF7EDE252C658E7300055C43 /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
+		FF7EDE282C65DAAB00055C43 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF7EDDE92C65814E00055C43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF7EDDF12C65814E00055C43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF7EDDF92C65814E00055C43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF7EDE042C65814E00055C43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF7EDDDF2C65814500055C43 = {
+			isa = PBXGroup;
+			children = (
+				FF7EDDE42C65814600055C43 /* Shared */,
+				FF7EDDEE2C65814E00055C43 /* iOS */,
+				FF7EDDF52C65814E00055C43 /* macOS */,
+				FF7EDDFF2C65814E00055C43 /* Tests iOS */,
+				FF7EDE0A2C65814E00055C43 /* Tests macOS */,
+				FF7EDDED2C65814E00055C43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF7EDDE42C65814600055C43 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FF7EDDE52C65814600055C43 /* AviLogApp.swift */,
+				FF7EDDE62C65814600055C43 /* ContentView.swift */,
+				FF7EDE282C65DAAB00055C43 /* SummaryView.swift */,
+				FF7EDE252C658E7300055C43 /* LogEntry.swift */,
+				FF7EDDE72C65814E00055C43 /* Assets.xcassets */,
+				FF7EDE222C65878800055C43 /* TestView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FF7EDDED2C65814E00055C43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF7EDDEC2C65814E00055C43 /* AviLog.app */,
+				FF7EDDF42C65814E00055C43 /* AviLog.app */,
+				FF7EDDFC2C65814E00055C43 /* Tests iOS.xctest */,
+				FF7EDE072C65814E00055C43 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF7EDDEE2C65814E00055C43 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FF7EDDEF2C65814E00055C43 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		FF7EDDF52C65814E00055C43 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				FF7EDDF62C65814E00055C43 /* Info.plist */,
+				FF7EDDF72C65814E00055C43 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		FF7EDDFF2C65814E00055C43 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FF7EDE002C65814E00055C43 /* Tests_iOS.swift */,
+				FF7EDE022C65814E00055C43 /* Info.plist */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		FF7EDE0A2C65814E00055C43 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				FF7EDE0B2C65814E00055C43 /* Tests_macOS.swift */,
+				FF7EDE0D2C65814E00055C43 /* Info.plist */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF7EDDEB2C65814E00055C43 /* AviLog (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF7EDE162C65814E00055C43 /* Build configuration list for PBXNativeTarget "AviLog (iOS)" */;
+			buildPhases = (
+				FF7EDDE82C65814E00055C43 /* Sources */,
+				FF7EDDE92C65814E00055C43 /* Frameworks */,
+				FF7EDDEA2C65814E00055C43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AviLog (iOS)";
+			productName = "AviLog (iOS)";
+			productReference = FF7EDDEC2C65814E00055C43 /* AviLog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF7EDDF32C65814E00055C43 /* AviLog (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF7EDE192C65814E00055C43 /* Build configuration list for PBXNativeTarget "AviLog (macOS)" */;
+			buildPhases = (
+				FF7EDDF02C65814E00055C43 /* Sources */,
+				FF7EDDF12C65814E00055C43 /* Frameworks */,
+				FF7EDDF22C65814E00055C43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AviLog (macOS)";
+			productName = "AviLog (macOS)";
+			productReference = FF7EDDF42C65814E00055C43 /* AviLog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF7EDDFB2C65814E00055C43 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF7EDE1C2C65814E00055C43 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				FF7EDDF82C65814E00055C43 /* Sources */,
+				FF7EDDF92C65814E00055C43 /* Frameworks */,
+				FF7EDDFA2C65814E00055C43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF7EDDFE2C65814E00055C43 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = FF7EDDFC2C65814E00055C43 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		FF7EDE062C65814E00055C43 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF7EDE1F2C65814E00055C43 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				FF7EDE032C65814E00055C43 /* Sources */,
+				FF7EDE042C65814E00055C43 /* Frameworks */,
+				FF7EDE052C65814E00055C43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF7EDE092C65814E00055C43 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = FF7EDE072C65814E00055C43 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF7EDDE02C65814500055C43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					FF7EDDEB2C65814E00055C43 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					FF7EDDF32C65814E00055C43 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					FF7EDDFB2C65814E00055C43 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = FF7EDDEB2C65814E00055C43;
+					};
+					FF7EDE062C65814E00055C43 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = FF7EDDF32C65814E00055C43;
+					};
+				};
+			};
+			buildConfigurationList = FF7EDDE32C65814500055C43 /* Build configuration list for PBXProject "AviLog" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF7EDDDF2C65814500055C43;
+			productRefGroup = FF7EDDED2C65814E00055C43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF7EDDEB2C65814E00055C43 /* AviLog (iOS) */,
+				FF7EDDF32C65814E00055C43 /* AviLog (macOS) */,
+				FF7EDDFB2C65814E00055C43 /* Tests iOS */,
+				FF7EDE062C65814E00055C43 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF7EDDEA2C65814E00055C43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF7EDE122C65814E00055C43 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF7EDDF22C65814E00055C43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF7EDE132C65814E00055C43 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF7EDDFA2C65814E00055C43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF7EDE052C65814E00055C43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF7EDDE82C65814E00055C43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF7EDE232C65878800055C43 /* TestView.swift in Sources */,
+				FF7EDE262C658E7300055C43 /* LogEntry.swift in Sources */,
+				FF7EDE292C65DAAE00055C43 /* SummaryView.swift in Sources */,
+				FF7EDE102C65814E00055C43 /* ContentView.swift in Sources */,
+				FF7EDE0E2C65814E00055C43 /* AviLogApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF7EDDF02C65814E00055C43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF7EDE242C65878800055C43 /* TestView.swift in Sources */,
+				FF7EDE272C658E7300055C43 /* LogEntry.swift in Sources */,
+				FF7EDE2A2C65DAAE00055C43 /* SummaryView.swift in Sources */,
+				FF7EDE112C65814E00055C43 /* ContentView.swift in Sources */,
+				FF7EDE0F2C65814E00055C43 /* AviLogApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF7EDDF82C65814E00055C43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF7EDE012C65814E00055C43 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF7EDE032C65814E00055C43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF7EDE0C2C65814E00055C43 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF7EDDFE2C65814E00055C43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF7EDDEB2C65814E00055C43 /* AviLog (iOS) */;
+			targetProxy = FF7EDDFD2C65814E00055C43 /* PBXContainerItemProxy */;
+		};
+		FF7EDE092C65814E00055C43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF7EDDF32C65814E00055C43 /* AviLog (macOS) */;
+			targetProxy = FF7EDE082C65814E00055C43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FF7EDE142C65814E00055C43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF7EDE152C65814E00055C43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FF7EDE172C65814E00055C43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VBYHTV6L9T;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noturlluvia.AviLog;
+				PRODUCT_NAME = AviLog;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF7EDE182C65814E00055C43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VBYHTV6L9T;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noturlluvia.AviLog;
+				PRODUCT_NAME = AviLog;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF7EDE1A2C65814E00055C43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VBYHTV6L9T;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noturlluvia.AviLog;
+				PRODUCT_NAME = AviLog;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FF7EDE1B2C65814E00055C43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VBYHTV6L9T;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noturlluvia.AviLog;
+				PRODUCT_NAME = AviLog;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FF7EDE1D2C65814E00055C43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VBYHTV6L9T;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.noturlluvia.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AviLog (iOS)";
+			};
+			name = Debug;
+		};
+		FF7EDE1E2C65814E00055C43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VBYHTV6L9T;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.noturlluvia.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AviLog (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF7EDE202C65814E00055C43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VBYHTV6L9T;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.noturlluvia.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "AviLog (macOS)";
+			};
+			name = Debug;
+		};
+		FF7EDE212C65814E00055C43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VBYHTV6L9T;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.noturlluvia.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "AviLog (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF7EDDE32C65814500055C43 /* Build configuration list for PBXProject "AviLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF7EDE142C65814E00055C43 /* Debug */,
+				FF7EDE152C65814E00055C43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF7EDE162C65814E00055C43 /* Build configuration list for PBXNativeTarget "AviLog (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF7EDE172C65814E00055C43 /* Debug */,
+				FF7EDE182C65814E00055C43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF7EDE192C65814E00055C43 /* Build configuration list for PBXNativeTarget "AviLog (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF7EDE1A2C65814E00055C43 /* Debug */,
+				FF7EDE1B2C65814E00055C43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF7EDE1C2C65814E00055C43 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF7EDE1D2C65814E00055C43 /* Debug */,
+				FF7EDE1E2C65814E00055C43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF7EDE1F2C65814E00055C43 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF7EDE202C65814E00055C43 /* Debug */,
+				FF7EDE212C65814E00055C43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF7EDDE02C65814500055C43 /* Project object */;
+}

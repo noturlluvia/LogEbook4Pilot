@@ -3,17 +3,19 @@
 //  Shared
 //
 //  Created by Lluvia Jing on 8/8/24.
-//
 
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var logData: LogData
+    @Environment(\.presentationMode) var presentationMode
+
     // State variables for storing input values
     @State private var date = Date()
     @State private var makeModel = ""
     @State private var idNumber = ""
     @State private var from = ""
-    @State private var stops = ""  // Optional stops field
+    @State private var stops = ""
     @State private var to = ""
     @State private var dayLandings = ""
     @State private var nightLandings = ""
@@ -38,106 +40,103 @@ struct ContentView: View {
     @State private var asFlightInstructorTime = ""
     @State private var remarks = ""
 
-    @State private var logEntries: [LogEntry] = []
-
-    var totalFlightTime: Double {
-        let singleEngine = Double(aircraftCategorySingleEngine) ?? 0
-        let multiEngine = Double(aircraftCategoryMultiEngine) ?? 0
-        let blank1 = Double(aircraftCategoryBlank1) ?? 0
-        let blank2 = Double(aircraftCategoryBlank2) ?? 0
-        return singleEngine + multiEngine + blank1 + blank2
+    // Computed property for total flight time
+    private var totalFlightTime: Double {
+        let total = [
+            Double(aircraftCategorySingleEngine) ?? 0.0,
+            Double(aircraftCategoryMultiEngine) ?? 0.0,
+            Double(aircraftCategoryBlank1) ?? 0.0,
+            Double(aircraftCategoryBlank2) ?? 0.0
+        ].reduce(0, +)
+        return total
     }
 
     var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Flight Information")) {
-                    DatePicker("Date", selection: $date, displayedComponents: .date)
-                    TextField("Make and Model", text: $makeModel)
-                    TextField("ID Number", text: $idNumber)
-                    TextField("From", text: $from)
-                    TextField("Stops", text: $stops)  // New stops field
-                    TextField("To", text: $to)
-                }
+        Form {
+            Section(header: Text("Flight Information")) {
+                DatePicker("Date", selection: $date, displayedComponents: .date)
+                TextField("Make and Model", text: $makeModel)
+                TextField("ID Number", text: $idNumber)
+                TextField("From", text: $from)
+                TextField("Stops", text: $stops)
+                TextField("To", text: $to)
+            }
 
-                Section(header: Text("Landings")) {
-                    HStack {
-                        TextField("Day", text: $dayLandings)
-                        TextField("Night", text: $nightLandings)
-                    }
-                }
-
-                Section(header: Text("Instrument Approaches")) {
-                    TextField("No. of Approaches", text: $instrumentApproachesNo)
-                    TextField("Type & Location 1", text: $instrumentApproachesTypeLocation1)
-                    TextField("Type & Location 2", text: $instrumentApproachesTypeLocation2)
-                    TextField("Type & Location 3", text: $instrumentApproachesTypeLocation3)
-                }
-
-                Section(header: Text("Aircraft Category and Class")) {
-                    TextField("Single-Engine (Hours)", text: $aircraftCategorySingleEngine)
-                    TextField("Multi-Engine (Hours)", text: $aircraftCategoryMultiEngine)
-                    TextField("Other Category 1 (Hours)", text: $aircraftCategoryBlank1)
-                    TextField("Other Category 2 (Hours)", text: $aircraftCategoryBlank2)
-                }
-
-                Section(header: Text("Instrument Time")) {
-                    TextField("Actual Time (Hours)", text: $instrumentActual)
-                    TextField("Hooded Time (Hours)", text: $instrumentHooded)
-                    TextField("Simulator Time (Hours)", text: $instrumentSimulator)
-                }
-
-                Section(header: Text("Flight Time")) {
-                    TextField("Night Time (Hours)", text: $nightTimeAll)
-                    TextField("Cross Country Time (Hours)", text: $crossCountryAll)
-                    TextField("Cross Country Over 50nm (Hours)", text: $crossCountryOver50nm)
-                    TextField("PIC Time (Hours)", text: $picTime)
-                    TextField("Solo Time (Hours)", text: $soloTime)
-                    TextField("Flight Simulator (Hours)", text: $flightSimulator)
-                    TextField("Dual Received (Hours)", text: $dualReceivedTime)
-                    TextField("As Flight Instructor (Hours)", text: $asFlightInstructorTime)
-                    Text("Total Flight Time (Hours): \(totalFlightTime, specifier: "%.2f")")
-                }
-
-                Section(header: Text("Remarks")) {
-                    TextEditor(text: $remarks)
-                        .frame(height: 100)
-                }
-
-                Button(action: saveLogEntry) {
-                    Text("Save Log Entry")
+            Section(header: Text("Landings")) {
+                HStack {
+                    TextField("Day", text: $dayLandings)
+                        .keyboardType(.numberPad)
+                    TextField("Night", text: $nightLandings)
+                        .keyboardType(.numberPad)
                 }
             }
-            .navigationTitle("Logbook Entry")
-            .toolbar {
-                NavigationLink(destination: SummaryView(logEntries: logEntries)) {
-                    Text("View Summary")
-                }
+
+            Section(header: Text("Instrument Approaches")) {
+                TextField("No. of Approaches", text: $instrumentApproachesNo)
+                    .keyboardType(.numberPad)
+                TextField("Type & Location 1", text: $instrumentApproachesTypeLocation1)
+                TextField("Type & Location 2", text: $instrumentApproachesTypeLocation2)
+                TextField("Type & Location 3", text: $instrumentApproachesTypeLocation3)
+            }
+
+            Section(header: Text("Aircraft Category and Class")) {
+                TextField("Single-Engine (Hours)", text: $aircraftCategorySingleEngine)
+                    .keyboardType(.decimalPad)
+                TextField("Multi-Engine (Hours)", text: $aircraftCategoryMultiEngine)
+                    .keyboardType(.decimalPad)
+                TextField("Other Category 1 (Hours)", text: $aircraftCategoryBlank1)
+                    .keyboardType(.decimalPad)
+                TextField("Other Category 2 (Hours)", text: $aircraftCategoryBlank2)
+                    .keyboardType(.decimalPad)
+            }
+
+            Section(header: Text("Instrument Time")) {
+                TextField("Actual Time (Hours)", text: $instrumentActual)
+                    .keyboardType(.decimalPad)
+                TextField("Hooded Time (Hours)", text: $instrumentHooded)
+                    .keyboardType(.decimalPad)
+                TextField("Simulator Time (Hours)", text: $instrumentSimulator)
+                    .keyboardType(.decimalPad)
+            }
+
+            Section(header: Text("Flight Time")) {
+                TextField("Night Time (Hours)", text: $nightTimeAll)
+                    .keyboardType(.decimalPad)
+                TextField("Cross Country Time (Hours)", text: $crossCountryAll)
+                    .keyboardType(.decimalPad)
+                TextField("Cross Country Over 50nm (Hours)", text: $crossCountryOver50nm)
+                    .keyboardType(.decimalPad)
+                TextField("PIC Time (Hours)", text: $picTime)
+                    .keyboardType(.decimalPad)
+                TextField("Solo Time (Hours)", text: $soloTime)
+                    .keyboardType(.decimalPad)
+                TextField("Flight Simulator (Hours)", text: $flightSimulator)
+                    .keyboardType(.decimalPad)
+                TextField("Dual Received (Hours)", text: $dualReceivedTime)
+                    .keyboardType(.decimalPad)
+                TextField("As Flight Instructor (Hours)", text: $asFlightInstructorTime)
+                    .keyboardType(.decimalPad)
+                Text("Total Flight Time: \(totalFlightTime, specifier: "%.2f")")
+            }
+
+            Section(header: Text("Remarks")) {
+                TextEditor(text: $remarks)
+                    .frame(height: 100)
+            }
+
+            Button(action: saveLogEntry) {
+                Text("Save Log Entry")
             }
         }
+        .navigationTitle("Logbook Entry")
     }
 
+    // Save log entry action
     func saveLogEntry() {
-        guard let dayLandingsInt = Int(dayLandings),
-              let nightLandingsInt = Int(nightLandings),
-              let instrumentApproachesNoInt = Int(instrumentApproachesNo),
-              let singleEngineDouble = Double(aircraftCategorySingleEngine),
-              let multiEngineDouble = Double(aircraftCategoryMultiEngine),
-              let blank1Double = Double(aircraftCategoryBlank1),
-              let blank2Double = Double(aircraftCategoryBlank2),
-              let actualInstrumentDouble = Double(instrumentActual),
-              let hoodedInstrumentDouble = Double(instrumentHooded),
-              let simulatorInstrumentDouble = Double(instrumentSimulator),
-              let nightTimeAllDouble = Double(nightTimeAll),
-              let crossCountryAllDouble = Double(crossCountryAll),
-              let crossCountryOver50nmDouble = Double(crossCountryOver50nm),
-              let picTimeDouble = Double(picTime),
-              let soloTimeDouble = Double(soloTime),
-              let flightSimulatorDouble = Double(flightSimulator),
-              let dualReceivedDouble = Double(dualReceivedTime),
-              let asFlightInstructorDouble = Double(asFlightInstructorTime) else {
-            return
-        }
+        // Handle empty numeric fields by defaulting them to 0
+        let dayLandingsInt = Int(dayLandings) ?? 0
+        let nightLandingsInt = Int(nightLandings) ?? 0
+        let instrumentApproachesNoInt = Int(instrumentApproachesNo) ?? 0
 
         let newEntry = LogEntry(
             date: date,
@@ -152,25 +151,27 @@ struct ContentView: View {
             instrumentApproachesTypeLocation1: instrumentApproachesTypeLocation1,
             instrumentApproachesTypeLocation2: instrumentApproachesTypeLocation2,
             instrumentApproachesTypeLocation3: instrumentApproachesTypeLocation3,
-            aircraftCategorySingleEngine: singleEngineDouble,
-            aircraftCategoryMultiEngine: multiEngineDouble,
-            aircraftCategoryBlank1: blank1Double,
-            aircraftCategoryBlank2: blank2Double,
-            instrumentActual: actualInstrumentDouble,
-            instrumentHooded: hoodedInstrumentDouble,
-            instrumentSimulator: simulatorInstrumentDouble,
-            nightTimeAll: nightTimeAllDouble,
-            crossCountryAll: crossCountryAllDouble,
-            crossCountryOver50nm: crossCountryOver50nmDouble,
-            picTime: picTimeDouble,
-            soloTime: soloTimeDouble,
-            flightSimulator: flightSimulatorDouble,
-            dualReceivedTime: dualReceivedDouble,
-            asFlightInstructorTime: asFlightInstructorDouble,
+            aircraftCategorySingleEngine: Double(aircraftCategorySingleEngine) ?? 0.0,
+            aircraftCategoryMultiEngine: Double(aircraftCategoryMultiEngine) ?? 0.0,
+            aircraftCategoryBlank1: Double(aircraftCategoryBlank1) ?? 0.0,
+            aircraftCategoryBlank2: Double(aircraftCategoryBlank2) ?? 0.0,
+            instrumentActual: Double(instrumentActual) ?? 0.0,
+            instrumentHooded: Double(instrumentHooded) ?? 0.0,
+            instrumentSimulator: Double(instrumentSimulator) ?? 0.0,
+            nightTimeAll: Double(nightTimeAll) ?? 0.0,
+            crossCountryAll: Double(crossCountryAll) ?? 0.0,
+            crossCountryOver50nm: Double(crossCountryOver50nm) ?? 0.0,
+            picTime: Double(picTime) ?? 0.0,
+            soloTime: Double(soloTime) ?? 0.0,
+            flightSimulator: Double(flightSimulator) ?? 0.0,
+            dualReceivedTime: Double(dualReceivedTime) ?? 0.0,
+            asFlightInstructorTime: Double(asFlightInstructorTime) ?? 0.0,
             totalFlightTime: totalFlightTime,
             remarks: remarks
         )
 
-        logEntries.append(newEntry)
+        logData.entries.append(newEntry)
+        presentationMode.wrappedValue.dismiss() // Navigate back to the summary view
     }
 }
+

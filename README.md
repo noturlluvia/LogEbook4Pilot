@@ -13,6 +13,8 @@ AviLog is a logbook entry application designed for pilots to track their flight 
 - **Instrument Time:** Track time spent under actual, hooded, and simulator conditions.
 - **Flight Time:** Record various aspects of flight time including PIC, Solo, and Dual Received.
 - **Summary View:** Calculate totals for all logged entries and filter results by a date range.
+- **Log Entry View:** Displays all log entries in a table-like view, with key columns visible and the option to download all entries as a CSV file.
+- **CSV Export:** Export log entries in CSV format.
 
 ## Setup and Installation
 
@@ -32,7 +34,6 @@ AviLog is a logbook entry application designed for pilots to track their flight 
    - Select your target device or simulator in Xcode.
    - Click the run button to build and launch the app.
 
-
 ## Usage
 
 - **Log Entry:**
@@ -42,11 +43,21 @@ AviLog is a logbook entry application designed for pilots to track their flight 
    - Access the summary view to see total hours and other statistics.
    - Use the date range picker to filter the summary based on specific dates.
 
+- **Log Entry View:**
+   - View all your logged entries in a table format.
+   - Export your data in CSV format for offline analysis or backup.
+
 ## Future Enhancements
 
 - **Graphical Reports:** Add charts to visualize weekly, monthly, and yearly flight data.
-- **Data Export:** Implement a feature to export log entries in various formats (e.g., CSV, PDF).
+- **Improved Data Presentation:** Refine the log entry view for better readability on small screens.
 - **Cloud Sync:** Integrate cloud storage to sync data across devices.
+- **Enhanced CSV Export:** Improve export options, such as filtering data before export.
+
+## Known Issues
+
+- **CSV Export:** The current implementation allows exporting all data, but it may not work as expected on all devices.
+- **Data Visualization:** The current view for log entries is functional but may need adjustments for readability, particularly on smaller screens.
 
 ## Contributing
 

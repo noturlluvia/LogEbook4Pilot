@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF7801842C7282BE000B9A87 /* LogEntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7801832C7282BE000B9A87 /* LogEntriesView.swift */; };
+		FF7801852C7282BE000B9A87 /* LogEntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7801832C7282BE000B9A87 /* LogEntriesView.swift */; };
 		FF7EDE012C65814E00055C43 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDE002C65814E00055C43 /* Tests_iOS.swift */; };
 		FF7EDE0C2C65814E00055C43 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDE0B2C65814E00055C43 /* Tests_macOS.swift */; };
 		FF7EDE0E2C65814E00055C43 /* AviLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EDDE52C65814600055C43 /* AviLogApp.swift */; };
@@ -41,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF7801832C7282BE000B9A87 /* LogEntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntriesView.swift; sourceTree = "<group>"; };
 		FF7EDDE52C65814600055C43 /* AviLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AviLogApp.swift; sourceTree = "<group>"; };
 		FF7EDDE62C65814600055C43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FF7EDDE72C65814E00055C43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 				FF7EDDE62C65814600055C43 /* ContentView.swift */,
 				FF7EDE282C65DAAB00055C43 /* SummaryView.swift */,
 				FF7EDE252C658E7300055C43 /* LogEntry.swift */,
+				FF7801832C7282BE000B9A87 /* LogEntriesView.swift */,
 				FF7EDDE72C65814E00055C43 /* Assets.xcassets */,
 				FF7EDE222C65878800055C43 /* TestView.swift */,
 			);
@@ -243,7 +247,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					FF7EDDEB2C65814E00055C43 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -261,7 +265,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FF7EDDE32C65814500055C43 /* Build configuration list for PBXProject "AviLog" */;
+			buildConfigurationList = FF7EDDE32C65814500055C43 /* Build configuration list for PBXProject "com.noturlluvia.AviLog" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -324,6 +328,7 @@
 				FF7EDE262C658E7300055C43 /* LogEntry.swift in Sources */,
 				FF7EDE292C65DAAE00055C43 /* SummaryView.swift in Sources */,
 				FF7EDE102C65814E00055C43 /* ContentView.swift in Sources */,
+				FF7801842C7282BE000B9A87 /* LogEntriesView.swift in Sources */,
 				FF7EDE0E2C65814E00055C43 /* AviLogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +341,7 @@
 				FF7EDE272C658E7300055C43 /* LogEntry.swift in Sources */,
 				FF7EDE2A2C65DAAE00055C43 /* SummaryView.swift in Sources */,
 				FF7EDE112C65814E00055C43 /* ContentView.swift in Sources */,
+				FF7801852C7282BE000B9A87 /* LogEntriesView.swift in Sources */,
 				FF7EDE0F2C65814E00055C43 /* AviLogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +540,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VBYHTV6L9T;
@@ -558,6 +565,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VBYHTV6L9T;
@@ -668,7 +676,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FF7EDDE32C65814500055C43 /* Build configuration list for PBXProject "AviLog" */ = {
+		FF7EDDE32C65814500055C43 /* Build configuration list for PBXProject "com.noturlluvia.AviLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF7EDE142C65814E00055C43 /* Debug */,

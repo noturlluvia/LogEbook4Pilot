@@ -57,7 +57,7 @@ AviLog is a logbook entry application designed for pilots to track their flight 
 ## Known Issues
 
 - **CSV Export:** The current implementation allows exporting all data, but it may not work as expected on all devices.
-- **Data Visualization:** The current view for log entries is functional but may need adjustments for readability, particularly on smaller screens.
+- **Data Visualization:** The current view for log entries is functional but may need adjustments for readability and presentation, particularly with plot options.
 
 ## Contributing
 

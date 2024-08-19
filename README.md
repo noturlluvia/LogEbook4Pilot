@@ -16,8 +16,10 @@ AviLog is a logbook entry application designed for pilots to track their flight 
 - **Log Entry View:** Displays all log entries in a table-like view, with key columns visible and the option to download all entries as a CSV file.
 - **CSV Export:** Export log entries in CSV format.
 
-## Setup and Installation
+## Installation
 
+### Setting Up Your Development Environment
+Ensure you have Xcode installed on your macOS machine. Clone this repository, open it in Xcode, and press the Run button.
 1. **Clone the Repository:**
 
     ```bash
@@ -34,23 +36,31 @@ AviLog is a logbook entry application designed for pilots to track their flight 
    - Select your target device or simulator in Xcode.
    - Click the run button to build and launch the app.
 
-## Running on an iPhone or iPad
+### Running the App on an iOS Device or iPad
+To run the app on your iOS device or iPad, follow these steps:
 
-- **Connect Your Device:** Connect your iPhone or iPad to your Mac using a USB cable.
-- **Select Device:** In Xcode, select your device from the list of simulators and devices.
-- **Build and Run:** Press the Run button (or Command + R) to build and run the app on your device.
-- **Trust the Developer:** If running the app for the first time, you may need to go to your device's Settings > General > Device Management and trust the developer profile.
+1. **Connect Your Device**:
+   - Connect your iOS device or iPad to your Mac via a USB cable.
+   - Unlock your device and, if prompted, choose to trust this computer.
+   
+2. **Select Your Device**:
+   - In Xcode's top device toolbar, select your connected device (iPhone or iPad).
+   
+3. **Build and Install the App**:
+   - Press the 'Run' button in Xcode to build and install the app on your device.
+   
+4. **Trust Your Developer Profile**:
+   - If necessary, go to `Settings` > `General` > `Device Management` on your iOS device, and trust your developer profile before opening the app.
+
+**Note**: This project is developed under Xcode 13.4.1 and does not support iOS versions beyond iOS 15.
 
 ## Usage
 
-- **Log Entry:**
-   - Fill in the flight details in the form and save the entry.
-   
-- **Summary View:**
+1. **Log Entry:** Fill in the flight details in the form and save the entry.
+2. **Summary View:**
    - Access the summary view to see total hours and other statistics.
    - Use the date range picker to filter the summary based on specific dates.
-
-- **Log Entry View:**
+3. **Log Entry View:**
    - View all your logged entries in a table format.
    - Export your data in CSV format for offline analysis or backup.
 

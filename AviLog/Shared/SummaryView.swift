@@ -35,7 +35,7 @@ struct SummaryView: View {
                         }
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
-                    
+
                     // Summary content here
                     GroupBox(label: Text("Total Landings")) {
                         Text("Day: \(calculateTotalLandings())")
@@ -76,6 +76,7 @@ struct SummaryView: View {
             .background(Color(UIColor.systemGroupedBackground))
             .navigationTitle("Flight Summary")
         }
+        .navigationViewStyle(StackNavigationViewStyle()) // This line forces the iPad to behave like the iPhone.
     }
 
     // Helper functions to calculate totals for each category
@@ -155,5 +156,3 @@ struct SummaryView: View {
         return logData.entries.reduce(0.0) { $0 + $1.totalFlightTime }
     }
 }
-
-

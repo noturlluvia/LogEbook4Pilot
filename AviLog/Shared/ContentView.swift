@@ -174,4 +174,3 @@ struct ContentView: View {
         presentationMode.wrappedValue.dismiss() // Navigate back to the summary view
     }
 }
-

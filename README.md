@@ -34,6 +34,13 @@ AviLog is a logbook entry application designed for pilots to track their flight 
    - Select your target device or simulator in Xcode.
    - Click the run button to build and launch the app.
 
+## Running on an iPhone or iPad
+
+- **Connect Your Device:** Connect your iPhone or iPad to your Mac using a USB cable.
+- **Select Device:** In Xcode, select your device from the list of simulators and devices.
+- **Build and Run:** Press the Run button (or Command + R) to build and run the app on your device.
+- **Trust the Developer:** If running the app for the first time, you may need to go to your device's Settings > General > Device Management and trust the developer profile.
+
 ## Usage
 
 - **Log Entry:**
